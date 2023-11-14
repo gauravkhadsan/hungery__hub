@@ -1,0 +1,253 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffeae0;
+
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav.logo h2 {
+    font-weight: 600;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+
+}
+
+.nav .logo B {
+    color: orangered;
+    
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.nav ul li {
+    margin-right: 30px;
+    margin-bottom: 2px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+
+    position: relative;
+}
+
+.nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+.nav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: orangered;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transition: 0.5s;
+}
+
+.nav ul li:hover:after {
+    width: 100%;
+}
+
+.dropdown {
+    flex-direction: column;
+    position: absolute;
+    padding: 10px 0;
+    background-color:rgba(233, 143, 116, 0.849);
+    border-radius: 5px;
+    line-height: 10px;
+    left: 63%;
+    transform: translateX(-47%);
+    align-items: center;
+    top: 37px;
+    transition: all .3s linear;
+    visibility: hidden;
+    opacity: 0;
+    border: 2px solid black;
+
+}
+
+.nav ul li:hover>.dropdown {
+    visibility: visible;
+    opacity: 1;
+    top: 32px;
+    
+}
+
+.dropdown li {
+    padding: 10px 0;
+    margin-left: 22px;
+    
+
+}
+
+input {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.signin {
+    background-color: orangered;
+    color: #ffeae0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.signup {
+    background: transparent;
+    border: none;
+}
+
+.content {
+    display: grid;
+
+    grid-template-columns: 41% 35%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+}
+
+.content .left {
+    display: block;
+    width: 100%;
+}
+
+.left {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left p {
+    margin-left: 20px;
+}
+
+.left .info button {
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.left h2 {
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.right img {
+    margin: 8px;
+    width: 250px;
+    height: auto;
+    position: relative;
+    animation: rotate 10s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.left .info {
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+
+}
+
+.left .info button {
+    background-color: orangered;
+    color: #ffeae0;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+
+.cards {
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    height: 200px;
+    width: 98%;
+    border-radius: 10px;
+
+}
+
+.cards .card {
+    border: 1px solid black;
+    position: relative;
+    margin: 9px;
+    height: auto;
+    width: 185px;
+    border-radius: 50px 10px 10px 10px;
+    overflow: hidden;
+    background-color: orangered;
+
+}
+
+.cards .card img {
+    height: 85px;
+    width: auto;
+}
+
+.cards .card h2 {
+    font-weight: 600;
+
+}
+
+.cards .card h4 {
+    font-weight: 500;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+}
+
+.cards .card .cart {
+    width: auto;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
